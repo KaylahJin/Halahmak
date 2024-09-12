@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}
+
+{% endblock %}  
+{% block content %}
+<body> 
+  <h2 class="text-center">ข้อมูล</h2>
+    <a href="all_person"><table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ชื่อ</th>
+            <th scope="col">สกุล</th>
+            <th scope="col">Email</th>
+            <th scope="col">เสื้อนักเรียน</th>
+            <th scope="col">เสื้อพละ</th>
+            <th scope="col">กระโปรงนักเรียน</th>
+            <th scope="col">กางเกงพละ</th>
+            <th scope="col">เสื้อลูกเสือ</th>
+            <th scope="col">กางเกงลูกเสือ</th>
+            <th scope="col">เสื้อลำลอง</th>
+            <th scope="col">ผ้าปูที่นอน</th>
+            <th scope="col">ปลอกหมอน</th>
+            <th scope="col">ผ้าเช็ดตัว</th>
+
+          </tr>
+        </thead>
+        <tbody>
+            {% for person in all_person %}
+          <tr>
+            <th scope="row">{{person.firstName}}</th>
+            <td>{{person.lastName}}</td>
+            <td>{{person.email}}</td>
+            <td>{{person.suniform}}</td>
+            <td>{{person.kuniform}}</td>
+            <td>{{person.sphysical}}</td>
+            <td>{{person.kphysical}}</td>
+            <td>{{person.stiger}}</td>
+            <td>{{person.ktiger}}</td>
+            <td>{{person.blueshirt}}</td>
+            <td>{{person.papu}}</td>
+            <td>{{person.plokmon}}</td>
+            <td>{{person.chedtua}}</td>
+
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table></a>
+</body>
+
+
+{% endblock %}
+  
